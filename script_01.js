@@ -34,9 +34,17 @@
 // }
 
 // Inkrement (var. Schrittweite)
-for (let i = 50; i <= 100; i += 2) {
-    output(i);
-}
+// for (let i = 50; i <= 100; i += 2) {
+//     output(i);
+// }
+
+/* 02b. For-Schleife für Array-Index (Iteration)*/
+// let arr = ["Ich","bin","die","coole","Maxine","Mützerich"];
+// for (let i = 0; i < arr.length; i++) {
+//     output(i); // innerer Index (Schleifen-Index) 
+//     output(arr[i]) // Array-Index --> Mapping
+// }
+
 
 
 /**
@@ -59,6 +67,7 @@ function getSentence(word1,word2,word3,word4,word5,word6) {
                 word5 + GAP +
                 word6 +
                 PUNCT;
+
     return str;
 }
 
@@ -82,10 +91,23 @@ function getSentenceArr(arr) {
     return str;
 }
 
+/*** 01b. Funktionalität mit Array 2  */
+// Transponierung:  untereinander ---> nebeneinander
+// Helge Schneider: Anananandereihung ...
 
+output(getSentenceArr2(["Ich","bin","die","coole","Maxine","Mützerich"]));
+function getSentenceArr2(arr) {
+    const GAP = " ";
+    const PUNCT = ".";
+    let str;
 
+    for (let i = 0; i < arr.length; i++) {
+    // str += arr[i] + GAP;
+    output(arr[i]);
+    }
 
-
+    return str;
+}
 
 
 
