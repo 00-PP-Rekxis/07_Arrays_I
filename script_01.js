@@ -106,6 +106,7 @@ function getSentence(word1,word2,word3,word4,word5,word6) {
     return str;
 }
 
+
 /*** 01a. Funktionalität mit Array 1 */
 // Kritik | Überlegung
 // word1,word2, .... wordN :: Semantische Struktur
@@ -126,6 +127,7 @@ function getSentenceArr(arr) {
     return str;
 }
 
+
 /*** 01b. Funktionalität mit Array 2  */
 // Transponierung:  untereinander ---> nebeneinander
 // Helge Schneider: Anananandereihung ...
@@ -133,39 +135,10 @@ output(getSentenceArr2(["Ich","bin","die","coole","Maxine","Mützerich"]));
 function getSentenceArr2(arr) {
     const GAP = " ";
     const PUNCT = ".";
-    let str = ""; // Anfangswert
 
-    for (let i = 0; i < arr.length; i++) {
-        // 2. Variante if-else
-        if (i < arr.length -1) {
-            str += arr[i] + GAP;
-        } else {
-            str += arr[i] + PUNCT;
-        }
-    }
-
-    return str;
+    // 3. Variante join()
+    return arr.join(GAP) + PUNCT;
 }
-
-
-
-
-
-
-
-// output(getSentenceShort(["Ich","bin","Max","Mütze", "cool"]));
-function getSentenceShort(ary) {
-    const GAP = " ";
-    const PUNCT = ".";
-    let outputStr = "";
-    for (let i = 0; i < ary.length; i++) {
-        outputStr += ary[i] + GAP;
-    }
-    return outputStr.trim() + PUNCT;
-    // return ary.join(' ') + PUNCT; // internal function | better
-}
-
-
 
 
 // Modul: Ausgabe in Konsole : Test
