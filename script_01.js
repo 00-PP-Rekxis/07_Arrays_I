@@ -44,8 +44,7 @@ function getSentence(ary) {
     for (let i = 0; i < ary.length; i++) {
         outputStr += ary[i] + GAP;
     }
-    outputStr = outputStr.trim() + PUNCT;
-    return outputStr
+    return outputStr.trim() + PUNCT
 }
 
 
